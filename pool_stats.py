@@ -12,10 +12,10 @@ def main():
 
    occupancy_re = re.compile(r".*Obsazenost: <strong>(\d*|Err)<\/strong><\/p>.*")
    air_temp_in_re = re.compile(r".*Teplota vzduch hala: <strong>(\d*\.{0,1}\d*)\s*°C<\/strong><\/p>.*")
-   air_temp_out_re = re.compile(r".*Teplota vzduch venku: <strong>(\d*\.{0,1}\d*)\s*°C<\/strong><\/p>.*")
+   air_temp_out_re = re.compile(r".*Teplota vzduchu: <strong>(\d*\.{0,1}\d*)\s*°C<\/strong><\/p>.*")
 
    watter_temp_in_re = re.compile(r".*Teplota vnitřní bazén: <strong>(\d*\.{0,1}\d*)\s*°C<\/strong><\/p>.*")
-   watter_temp_out_re = re.compile(r".*Teplota 50 m bazénu: <strong>(\d*\.{0,1}\d*)\s*°C<\/strong><\/p>.*")
+   watter_temp_out_re = re.compile(r".*Teplota vody.*: <strong>(\d*\.{0,1}\d*)\s*°C<\/strong><\/p>.*")
 
 
    occupancy_in_match = occupancy_re.search(swim_pool_in_page)
@@ -41,3 +41,4 @@ def main():
 
 if __name__ == '__main__':
     main()
+
